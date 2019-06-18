@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://packing/PackTest.gd" type="Script" id=1]
+[ext_resource path="res://dodge/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TestScenes/CustomDraw.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/enemySwimming_1.png" type="Texture" id=4]
+
+[node name="PackTest" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 800.0
+margin_bottom = 600.0
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 182, 169 )
+
+[node name="CustomDraw" parent="Player" instance=ExtResource( 3 )]
+keyboardMovement = false
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 293.514, 88.5944 )
+z_index = 10
+texture = ExtResource( 4 )
+centered = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0.811765, 0.898039, 1, 1 )

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://dodge/Enemy0.gd" type="Script" id=1]
+[ext_resource path="res://art/enemyFlyingAlt_2.png" type="Texture" id=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -18, 0 )
+b = Vector2( 18, 0 )
+
+[node name="Enemy0" type="Area2D"]
+z_index = 1
+collision_layer = 3
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
