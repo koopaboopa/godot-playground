@@ -7,7 +7,7 @@ var justPressed: Dictionary = { ENLARGE_ACTION: false, RESET_ACTION: false }
 
 var startAngle: float = -90
 var angleSize: float = 60
-var angleDelta: float = 100
+var angleDelta: float = 100 # degrees per second
 
 enum {
 	ENLARGE_ACTION
